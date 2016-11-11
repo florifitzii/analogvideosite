@@ -1,0 +1,50 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+
+
+// Our variables
+$base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$base-font-size:   16px;
+$base-font-weight: 400;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.5;
+
+$spacing-unit:     30px;
+
+$text-color:       #ffffff;
+$text-color-inv:   #000000;
+$background-color: #3300B9;
+$brand-color:      #3300B9;
+$primaryColor:     #3300B9;
+$secondaryColor:   #FF4F4F;
+$white:            #ffffff;
+
+
+// Width of the content area
+$content-width:    800px;
+
+$on-palm:          600px;
+$on-laptop:        800px;
+
+$fancyFont:      'PT Mono';
+$bodyFont:       'Montserrat';
+
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+        "base",
+        "layout",
+        "grid",
+        "header",
+        "about",
+        "fonts"
+
+;
